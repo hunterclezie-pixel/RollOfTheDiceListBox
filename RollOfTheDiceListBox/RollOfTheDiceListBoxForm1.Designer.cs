@@ -1,6 +1,6 @@
 ﻿namespace RollOfTheDiceListBox
 {
-    partial class Form1
+    partial class RollOfTheDiceListBoxForm1
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            SuspendLayout();
+            // 
+            // RollOfTheDiceListBoxForm1
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Name = "RollOfTheDiceListBoxForm1";
             Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
