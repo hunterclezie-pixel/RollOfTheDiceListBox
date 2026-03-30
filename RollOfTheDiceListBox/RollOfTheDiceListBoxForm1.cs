@@ -5,8 +5,14 @@ RCET2265
 RollOfTheDiceListBox
 github url: https://github.com/hunterclezie-pixel/RollOfTheDiceListBox.git
 */
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace RollOfTheDiceListBox
 {
+    //Todo:
+    //[]Display the results in a list box with formatted columns and headers.
+    //[]The header row should show the roll result numbers 2 to 12.
+    //[]The data row should show the total count of how many times each number came up.
     public partial class RollOfTheDiceListBoxForm1 : Form
     {
         public RollOfTheDiceListBoxForm1()
@@ -18,7 +24,7 @@ namespace RollOfTheDiceListBox
 
         void SetDefaults()
         {
-            RollOfTheDiceLabel = RollDice;
+            RollOfTheDiceLabel.Text =;
         }
 
         void RollDice()
