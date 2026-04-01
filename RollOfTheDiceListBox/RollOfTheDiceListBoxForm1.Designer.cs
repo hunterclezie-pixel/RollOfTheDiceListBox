@@ -28,20 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            RollOfTheDiceLabel = new Label();
             RollButton = new Button();
             ClearButton = new Button();
             ExitButton = new Button();
+            RollOfTheDiceListBox1 = new ListBox();
             SuspendLayout();
-            // 
-            // RollOfTheDiceLabel
-            // 
-            RollOfTheDiceLabel.AutoSize = true;
-            RollOfTheDiceLabel.Location = new Point(316, 103);
-            RollOfTheDiceLabel.Name = "RollOfTheDiceLabel";
-            RollOfTheDiceLabel.Size = new Size(117, 20);
-            RollOfTheDiceLabel.TabIndex = 0;
-            RollOfTheDiceLabel.Text = "Roll Of The Dice";
             // 
             // RollButton
             // 
@@ -73,26 +64,32 @@
             ExitButton.UseVisualStyleBackColor = true;
             ExitButton.Click += ExitButton_Click;
             // 
+            // RollOfTheDiceListBox1
+            // 
+            RollOfTheDiceListBox1.Font = new Font("Consolas", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            RollOfTheDiceListBox1.Location = new Point(37, 29);
+            RollOfTheDiceListBox1.Name = "RollOfTheDiceListBox1";
+            RollOfTheDiceListBox1.Size = new Size(732, 238);
+            RollOfTheDiceListBox1.TabIndex = 0;
+            // 
             // RollOfTheDiceListBoxForm1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(RollOfTheDiceListBox1);
             Controls.Add(ExitButton);
             Controls.Add(ClearButton);
             Controls.Add(RollButton);
-            Controls.Add(RollOfTheDiceLabel);
             Name = "RollOfTheDiceListBoxForm1";
             Text = "Form1";
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label RollOfTheDiceLabel;
         private Button RollButton;
         private Button ClearButton;
         private Button ExitButton;
+        private ListBox RollOfTheDiceListBox1;
     }
 }

@@ -18,56 +18,61 @@ namespace RollOfTheDiceListBox
         public RollOfTheDiceListBoxForm1()
         {
             InitializeComponent();
-            RollDice();
+            SetDefaults();
         }
 
         //Custom Methids below here --------------------------------------------------------------
 
         void SetDefaults()
         {
-
+            RollOfTheDiceListBox1.Items.Add("Roll Of The Dice");
         }
 
         void RollDice()
         {
-            Random rand = new Random(); //Constructor
-            int[] rolls = new int[13]; // Array to count occurrences of each possible roll (2-12)
-            string columnSeperator = "|"; // String to separate columns in the output
-
-            Console.WriteLine("Roll Of The Dice");
-
-            for (int i = 0; i < 1000; i++)
+            RollOfTheDiceListBox1.Items.Clear();
             {
-                int n = rand.Next(2, 12 + 1); // Random number between 2 and 12
-                rolls[n]++; // Increment the count for this roll
-            }
+                Random rand = new Random(); //Constructor
+                int[] rolls = new int[13]; // Array to count occurrences of each possible roll (2-12)
+                string columnSeperator = "|"; // String to separate columns in the output
+                string currentLine = ""; // String to build the current line of output
 
-            // Print the results:
-            // First line is the numbers 2-12
-            for (int i = 2; i <= 12; i++)
-            {
-                Console.Write($"{i}".PadRight(4) + columnSeperator);
-            }
-            Console.WriteLine();
+                RollOfTheDiceListBox1.Items.Add("Roll Of The Dice");
 
-            // Second line is the number of times each number was rolled
-            for (int i = 2; i <= 12; i++)
-            {
-                Console.Write($"{rolls[i]}".PadRight(4) + columnSeperator);
+                for (int i = 0; i < 1000; i++)
+                {
+                    int n = rand.Next(2, 12 + 1); // Random number between 2 and 12
+                    rolls[n]++; // Increment the count for this roll
+                }
+
+                // First line is the numbers 2-12
+                for (int i = 2; i <= 12; i++)
+                {
+                    currentLine += ($"{i}".PadRight(4) + columnSeperator);
+                }
+                RollOfTheDiceListBox1.Items.Add(currentLine);
+                currentLine = ""; // Clear currentLine for the next row of data
+
+                // Second line is the number of times each number was rolled
+                for (int i = 2; i <= 12; i++)
+                {
+                    currentLine += ($"{rolls[i]}".PadRight(4) + columnSeperator);
+                }
+                RollOfTheDiceListBox1.Items.Add(currentLine);
+                currentLine = ""; // Clear currentLine for the next row of data
             }
-            Console.WriteLine();
         }
 
         //Event Handlers below here --------------------------------------------------------------
 
         private void RollButton_Click(object sender, EventArgs e)
         {
-
+            RollDice();
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
-
+            RollOfTheDiceListBox1.Items.Clear();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
