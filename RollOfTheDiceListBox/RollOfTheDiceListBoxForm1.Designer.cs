@@ -37,7 +37,7 @@
             // RollOfTheDiceLabel
             // 
             RollOfTheDiceLabel.AutoSize = true;
-            RollOfTheDiceLabel.Location = new Point(321, 78);
+            RollOfTheDiceLabel.Location = new Point(316, 103);
             RollOfTheDiceLabel.Name = "RollOfTheDiceLabel";
             RollOfTheDiceLabel.Size = new Size(117, 20);
             RollOfTheDiceLabel.TabIndex = 0;
@@ -51,6 +51,7 @@
             RollButton.TabIndex = 1;
             RollButton.Text = "Roll";
             RollButton.UseVisualStyleBackColor = true;
+            RollButton.Click += RollButton_Click;
             // 
             // ClearButton
             // 
@@ -60,6 +61,7 @@
             ClearButton.TabIndex = 2;
             ClearButton.Text = "Clear";
             ClearButton.UseVisualStyleBackColor = true;
+            ClearButton.Click += ClearButton_Click;
             // 
             // ExitButton
             // 
@@ -69,6 +71,7 @@
             ExitButton.TabIndex = 3;
             ExitButton.Text = "Exit";
             ExitButton.UseVisualStyleBackColor = true;
+            ExitButton.Click += ExitButton_Click;
             // 
             // RollOfTheDiceListBoxForm1
             // 

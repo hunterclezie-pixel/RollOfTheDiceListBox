@@ -18,13 +18,14 @@ namespace RollOfTheDiceListBox
         public RollOfTheDiceListBoxForm1()
         {
             InitializeComponent();
+            RollDice();
         }
 
         //Custom Methids below here --------------------------------------------------------------
 
         void SetDefaults()
         {
-            RollOfTheDiceLabel.Text =;
+
         }
 
         void RollDice()
@@ -55,11 +56,23 @@ namespace RollOfTheDiceListBox
                 Console.Write($"{rolls[i]}".PadRight(4) + columnSeperator);
             }
             Console.WriteLine();
-
-            //pause
-            Console.Read();
         }
 
         //Event Handlers below here --------------------------------------------------------------
+
+        private void RollButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
