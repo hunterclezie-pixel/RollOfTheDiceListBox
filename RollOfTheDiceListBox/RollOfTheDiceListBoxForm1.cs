@@ -25,12 +25,14 @@ namespace RollOfTheDiceListBox
 
         void SetDefaults()
         {
+            // Set the default state of the form here
             RollOfTheDiceListBox1.Items.Add("Welcome to the Roll of the Dice Simulator! " +
                 "Please press roll to simulate!");
         }
 
         void RollDice()
         {
+            // Simulate rolling two dice 1000 times and count the occurrences of each possible roll (2-12)
             RollOfTheDiceListBox1.Items.Clear();
             {
                 Random rand = new Random(); //Constructor
@@ -70,38 +72,45 @@ namespace RollOfTheDiceListBox
 
         private void RollButton_Click(object sender, EventArgs e)
         {
+            // Call the method to simulate rolling the dice and display the results
             RollDice();
         }
 
         private void ClearButton_Click(object sender, EventArgs e)
         {
+            // Clear the list box and reset to default state
             RollOfTheDiceListBox1.Items.Clear();
             SetDefaults();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
+            // Close the application
             this.Close();
         }
 
         private void rollToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Call the method to simulate rolling the dice and display the results
             RollDice();
         }
 
         private void clearToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Clear the list box and reset to default state
             RollOfTheDiceListBox1.Items.Clear();
             SetDefaults();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Close the application
             this.Close();
         }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // Display a message box with help information
             MessageBox.Show("There is no help...");
         }
     }
