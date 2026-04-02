@@ -1,6 +1,6 @@
 ﻿namespace RollOfTheDiceListBox
 {
-    partial class RollOfTheDiceListBoxForm1
+    partial class RollOfTheDiceListBoxForm
     {
         /// <summary>
         ///  Required designer variable.

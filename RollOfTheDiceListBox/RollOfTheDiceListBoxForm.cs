@@ -13,9 +13,9 @@ namespace RollOfTheDiceListBox
     //[x]Display the results in a list box with formatted columns and headers.
     //[x]The header row should show the roll result numbers 2 to 12.
     //[x]The data row should show the total count of how many times each number came up.
-    public partial class RollOfTheDiceListBoxForm1 : Form
+    public partial class RollOfTheDiceListBoxForm : Form
     {
-        public RollOfTheDiceListBoxForm1()
+        public RollOfTheDiceListBoxForm()
         {
             InitializeComponent();
             SetDefaults();
