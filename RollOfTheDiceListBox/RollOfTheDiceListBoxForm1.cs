@@ -25,7 +25,8 @@ namespace RollOfTheDiceListBox
 
         void SetDefaults()
         {
-            RollOfTheDiceListBox1.Items.Add("Roll Of The Dice");
+            RollOfTheDiceListBox1.Items.Add("Welcome to the Roll of the Dice Simulator! " +
+                "Please press roll to simulate!");
         }
 
         void RollDice()
@@ -37,7 +38,8 @@ namespace RollOfTheDiceListBox
                 string columnSeperator = "|"; // String to separate columns in the output
                 string currentLine = ""; // String to build the current line of output
 
-                RollOfTheDiceListBox1.Items.Add("Roll Of The Dice");
+                RollOfTheDiceListBox1.Items.Add("".PadRight(20) + "Roll Of The Dice");
+                RollOfTheDiceListBox1.Items.Add("--------------------------------------------------------");
 
                 for (int i = 0; i < 1000; i++)
                 {
@@ -51,6 +53,7 @@ namespace RollOfTheDiceListBox
                     currentLine += ($"{i}".PadRight(4) + columnSeperator);
                 }
                 RollOfTheDiceListBox1.Items.Add(currentLine);
+                RollOfTheDiceListBox1.Items.Add("--------------------------------------------------------");
                 currentLine = ""; // Clear currentLine for the next row of data
 
                 // Second line is the number of times each number was rolled
