@@ -10,9 +10,9 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 namespace RollOfTheDiceListBox
 {
     //Todo:
-    //[]Display the results in a list box with formatted columns and headers.
-    //[]The header row should show the roll result numbers 2 to 12.
-    //[]The data row should show the total count of how many times each number came up.
+    //[x]Display the results in a list box with formatted columns and headers.
+    //[x]The header row should show the roll result numbers 2 to 12.
+    //[x]The data row should show the total count of how many times each number came up.
     public partial class RollOfTheDiceListBoxForm1 : Form
     {
         public RollOfTheDiceListBoxForm1()
@@ -76,11 +76,33 @@ namespace RollOfTheDiceListBox
         private void ClearButton_Click(object sender, EventArgs e)
         {
             RollOfTheDiceListBox1.Items.Clear();
+            SetDefaults();
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void rollToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RollDice();
+        }
+
+        private void clearToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RollOfTheDiceListBox1.Items.Clear();
+            SetDefaults();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("There is no help...");
         }
     }
 }
